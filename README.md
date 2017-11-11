@@ -1,3 +1,3 @@
-Pagination using Rx operators.
+RecyclerView Pagination using Rx operators.
 
 Make it simple. #Rxjava
