@@ -22,7 +22,7 @@ jobs:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
           name: Run Tests
-          command: export TERM=xterm && ./gradlew assambleRelease
+          command: export TERM=xterm && ./gradlew assembleRelease
       - store_artifacts:
           path: /src/app/build/outputs/apk/
           prefix: apk
