@@ -22,9 +22,9 @@ jobs:
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
           name: Run Tests
-          command: export TERM=xterm && ./gradlew lint test
+          command: export TERM=xterm && ./gradlew assambleRelease
       - store_artifacts:
-          path: app/build/reports
-          destination: reports
+          path: /src/app/build/outputs/apk/
+          prefix: apk
       - store_test_results:
           path: app/build/test-results
